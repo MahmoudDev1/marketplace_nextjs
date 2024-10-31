@@ -25,19 +25,19 @@ export default async function MerchantPage({ params }: { params: { id: string } 
   return (
     <>
       <div className="bg-white shadow p-3 rounded-md flex gap-4 mt-10">
-        <Image src={merchant.store_image} alt="Merchant Store Image" width={120} height={120} className="rounded-md w-20 h-20 sm:w-32 sm:h-32" />
+        <Image src={merchant.store_image} alt="Merchant Store Image" width={120} height={120} className="rounded-md w-20 h-20 sm:w-32 sm:h-32 self-center" />
         <div>
-          <h2 className="mt-1 font-medium text-xl">{merchant.store_name}</h2>
+          <h2 className="mt-1 font-medium text-lg sm:text-xl">{merchant.store_name}</h2>
           <div className="mt-3">
-            <p className="text-sm text-gray-600">
+            <p className="text-xs sm:text-sm text-gray-600">
               <FaEnvelope className="inline me-2" />
               {merchant.email}
             </p>
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="text-xs sm:text-sm text-gray-600 mt-1">
               <FaHeart className="inline me-2" />
               {totalLikesCount} Store likes
             </p>
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="text-xs sm:text-sm text-gray-600 mt-1">
               <HiMiniShoppingBag className="inline me-2" />
               {totalProductsCount} {totalProductsCount === 1 ? "Product" : "Products"}
             </p>
