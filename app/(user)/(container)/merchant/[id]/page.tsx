@@ -25,7 +25,7 @@ export default async function MerchantPage({ params }: { params: { id: string } 
   return (
     <>
       <div className="bg-white shadow p-3 rounded-md flex gap-4 mt-10">
-        <Image src={merchant.store_image} alt="Merchant Store Image" width={120} height={120} className="rounded-md" />
+        <Image src={merchant.store_image} alt="Merchant Store Image" width={120} height={120} className="rounded-md w-20 h-20 sm:w-32 sm:h-32" />
         <div>
           <h2 className="mt-1 font-medium text-xl">{merchant.store_name}</h2>
           <div className="mt-3">
@@ -46,7 +46,7 @@ export default async function MerchantPage({ params }: { params: { id: string } 
       </div>
       <div className="bg-white shadow p-3 rounded-md mt-3">
         <h2 className="mb-2 pb-2 border-b font-medium text-lg">Latest Products</h2>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
           {latestProducts.map((product) => {
             return <ProductBox product={product} key={product.id} />;
           })}
